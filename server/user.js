@@ -3,14 +3,7 @@ var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://localhost:27017/User");
 
-var User = mongoose.model('User', {
-  email: {
-    type: String,
-    required: true,
-    minlength: 2,
-    trim: true
-  }
-});
+var {User} = require('./models/user');
 
 var usr = new User({
   email: 'san@mail.com'
