@@ -151,9 +151,6 @@ app.delete('/users/me/token', authenticate, (req, res) => {
   });
 });
 
-app.listen(process.env.PORT || 3000, () => {
-  console.log(`Started on port ${port}`);
-})
-
+app.listen(process.env.PORT || 3000);
 
 module.exports = {app};
